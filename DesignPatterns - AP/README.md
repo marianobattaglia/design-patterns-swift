@@ -1,7 +1,7 @@
 # DesignPatterns
 
-Curso: https://meli.udemy.com/course/patrones-de-diseno-swift
-Enlace de interés: https://refactoring.guru/design-patterns/swift 
+- Curso: https://meli.udemy.com/course/patrones-de-diseno-swift
+- Enlace de interés: https://refactoring.guru/design-patterns/swift 
 
 # Tipos de patrones
 
