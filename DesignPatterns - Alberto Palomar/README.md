@@ -45,24 +45,77 @@ Se encargan de definir las formas en las que interactúan y reparten responsabil
 
 # UML - Lenguaje Unificado de Modelo
 
-Diagrama de clases
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/184a0b95-335d-4738-bdf8-ec0cc27d5a77" width="500">
+	</p>
+</div>
 
-Símbolo de herencia 
+### Diagrama de clases
 
-Símbolo Asociación 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/6809401f-bfcc-4fe6-bb39-479d3820574e" width="500">
+	</p>
+</div>
 
-Símbolo Dependencia
+### Símbolo de herencia 
 
-Símbolo Agregación
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/955db346-73d9-4f75-a686-d5c75ed54476" width="500">
+	</p>
+</div>
 
-Símbolo Composición
+### Símbolo Asociación 
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/242b7d64-adbc-47d7-9d1f-57a8b79d6af4" width="500">
+	</p>
+</div>
+
+### Símbolo Dependencia
+
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/1e146bf5-46b4-4994-8fd9-e4d7ceeed325" width="500">
+	</p>
+</div>
+
+### Símbolo Agregación
+
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/6ea08539-08af-46dc-ad9d-77dadd030403" width="500">
+	</p>
+</div>
+
+### Símbolo Composición
+
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/c1ae7233-8e13-4d13-8253-ee8c9c7a6055" width="500">
+	</p>
+</div>
 
 # Patrones Creacionales
 
 ## Factory Method
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/969c91a7-f30d-45a2-a883-6023ab2101a1" width="500">
+	</p>
+</div>
+
 Ejemplo: Creación de un Payment Factory.
+
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/050a5304-eaa6-4ae9-8d72-38aba9258f94" width="500">
+	</p>
+</div>
 
 ### Ventajas
 - Si tenemos un nuevo método de pago, creamos una nueva clase y lo agregamos al enum sin afectar el resto de la lógica. 
@@ -70,6 +123,12 @@ Ejemplo: Creación de un Payment Factory.
 - Permite desacoplamiento de código.
 
 ## Abstract Factory
+
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/f1b9e954-e507-4d45-aef3-a7d1946a9e73" width="500">
+	</p>
+</div>
 
 Similar a Factory Method pero orientado a la combinación de familias de productos. 
 
@@ -84,6 +143,12 @@ Similar a Factory Method pero orientado a la combinación de familias de product
 ## Builder
 Un único procedimiento de creación de objetos. Crea objetos a partir de un “objeto fuente”.
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/26dd0f3b-3130-4f9a-b6bf-c92c47459a51" width="500">
+	</p>
+</div>
+
 ### Ventajas
 - Reduce el acoplamiento.
 - Permite crear estructuras complejas respetando una interfaz común de la clase Builder.
@@ -96,6 +161,11 @@ Un único procedimiento de creación de objetos. Crea objetos a partir de un “
 Crea objetos a partir de un modelo. Crea en base a un prototipo. Permite que un objeto cree una copia de sí mismo sin conocer su clase, etc. 
 Para implementarlo se debe heredar de la clase NSCopying
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/de4a4ad1-9718-428b-a1d3-7dcee57fe445" width="500">
+	</p>
+</div>
 
 - Interfaz: Metodo clone que permite crear prototipo
 - ConcretePrototype: Devuelven una copia de el mismo
@@ -115,8 +185,14 @@ Patrón de diseño creacional que nos permite que una aplicación pueda tener so
 Permite que el mismo objeto sea siempre compartido en distintas partes del código, garantizando que una clase tenga una sola instancia, proporcionando un punto de acceso global (desde cualquier punto de nuestra aplicación).
 El uso común es acceso a BD o web service, donde podemos hacer solicitudes desde cualquier parte de nuestra aplicación, pero queremos siempre tener una única instancia. 
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/ac53e268-a5d8-44e4-8a73-74a8552c1bbc" width="500">
+	</p>
+</div>
 
 El siguiente código explica como siempre será la misma instancia:
+
 ```swift 
 func testSingleton() {
         let instancia1 = CardSingleton.shared
@@ -142,7 +218,13 @@ func testSingleton() {
 Patrón de comportamiento  que permite acoplar el emisor de una petición a su receptor, dando a más de un objeto la posibilidad de responder a dicha petición. 
 Permite que varias clases puedan manejar una solicitud, independientemente de cualquier otro objeto a lo largo de la cadena. 
 Una vez realizada la solicitud se termina la cadena. 
- 
+
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/6da36d0e-f4aa-437a-ae56-7c0424fb190c" width="500">
+	</p>
+</div>
+
 ### Ventajas
 - Reduce grado de acoplamiento
 - El objeto no necesita conocer la estructura de la cadena
@@ -155,6 +237,12 @@ Una vez realizada la solicitud se termina la cadena.
 ## Command
 Command es un patrón de diseño de comportamiento que convierte una solicitud en un objeto independiente que contiene toda la información sobre la solicitud. Esta transformación te permite parametrizar los métodos con diferentes solicitudes, retrasar o poner en cola la ejecución de una solicitud y soportar operaciones que no se pueden realizar.
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/00934e9d-b6c2-4991-b4ce-ba3f8c6c7e69" width="500">
+	</p>
+</div>
+
 ### Ventajas
 - Código extensible, podemos agregar nuevos comandos sin cambiar el código existente.
 ### Desventajas
@@ -163,6 +251,11 @@ Command es un patrón de diseño de comportamiento que convierte una solicitud e
 ## Iterator
 Permite acceder de manera secuencial a los elementos de una colección sin exponer su representación subyacente (lista, pila, árbol, etc.). 
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/e7386ee6-f9b5-4d7c-8a4a-31d990e579f8" width="500">
+	</p>
+</div>
 
 ### Ventajas
 - Se puede acceder a una colección de objetos sin conocer el código de los objetos. 
@@ -172,6 +265,11 @@ Permite acceder de manera secuencial a los elementos de una colección sin expon
 ## Mediator
 Permite el desacoplamiento de los objetos introduciendo una capa intermedia para que la interacción de esta, para hacer el sistema más mantenible.
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/c94773f8-c6bc-4739-8def-bc9b90f9c83d" width="500">
+	</p>
+</div>
 
 ### Ventajas
 - Reduce el acoplamiento entre los objetos
@@ -181,6 +279,11 @@ Permite el desacoplamiento de los objetos introduciendo una capa intermedia para
 ## Memento
 Punto de restauración en el ciclo de vida de un objeto. Permite capturar y exportar el estado interno de un objeto para que luego se pueda restaurar sin romper la encapsulación. 
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/f568970f-c91e-4658-8a52-d33fe1933122" width="500">
+	</p>
+</div>
 
 ### Ventajas
 - Podemos descartar cambios no deseados y restaurarlos a un estado deseado o estable.
@@ -195,6 +298,11 @@ Punto de restauración en el ciclo de vida de un objeto. Permite capturar y expo
 Permite implementar una estratégia que reacciona a los cambios de estado en el objeto.
 Lo usamos cuando necesitamos detectar cambios en el tiempo de ejecución y queremos actualizar el estado.
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/9bad4227-3696-418d-8c28-dc9e648885d6" width="500">
+	</p>
+</div>
 
 ### Ventajas
 - Permite modificar las clases subject y los observers independientemente.
@@ -205,8 +313,13 @@ Lo usamos cuando necesitamos detectar cambios en el tiempo de ejecución y quere
 - Al principio resulta complicado de entender. 
 
 ## State
-- Un objeto modifica su comportamiento cada vez que cambia su estado interno. 
+Un objeto modifica su comportamiento cada vez que cambia su estado interno. 
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/ccc79820-1684-4818-b5cd-aab9b7f5655e" width="500">
+	</p>
+</div>
 
 ### Ventajas
 - Permite agregar nuevos estados sin afectar otros componentes. 
@@ -217,6 +330,11 @@ Lo usamos cuando necesitamos detectar cambios en el tiempo de ejecución y quere
 ## Interpreter
 Dado un lenguaje define una representación para su gramática junto con un intérprete de su lenguaje. Sirve para crear sistemas estilo RegEx.
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/dd57f3a1-3be8-42ac-96c9-8a01b13ec203" width="500">
+	</p>
+</div>
 
 ### Ventajas
 - Es fácil cambiar la gramática a través de la herencia.
@@ -227,6 +345,11 @@ Dado un lenguaje define una representación para su gramática junto con un int�
 ## Strategy
 Permite elegir una implementación específica o tarea en tiempo de ejecución para la misma tarea. Encapsula los algoritmos en clase permitiendo que sean reutilizados. Dependiendo de la tarea que estemos podemos elegir la implementación sin afectar la aplicación.
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/89f56049-cd7d-45a6-bb34-b74711a769a0" width="500">
+	</p>
+</div>
 
 ### Ventajas
 - Permite alterar el comportamiento de la aplicación sin que ello implique el cambio de su arquitectura.
@@ -239,6 +362,12 @@ Permite elegir una implementación específica o tarea en tiempo de ejecución p
 ## Template
 Define los pasos secuenciales para ejecutar un algoritmo de varios pasos. Define la estructura del algoritmo y su lógica será implementada por las subclases.
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/1e74b45a-9883-4aa1-aa34-7dbcf630cc35" width="500">
+	</p>
+</div>
+
 ### Ventajas
 - Nos ahorra duplicar código.
 - Se mueve toda la implementación a la clase abstracta, permitiendo reutilizar el código de una manera muy sencilla.
@@ -250,6 +379,11 @@ Define los pasos secuenciales para ejecutar un algoritmo de varios pasos. Define
 ## Visitor
 Permite separar un algoritmo de la estructura del objeto en el que opera. Al separar nos ofrece la capacidad de agregar nuevas operaciones a la estructura del objeto sin modificar dicha estructura. 
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/1ad4869f-1b00-42f1-9cdf-d8e72b9e5cfd" width="500">
+	</p>
+</div>
 
 ### Ventajas
 - Permite agregar nuevas operaciones a la jerarquía de visitantes sin contaminar mucho el diseño asistente.
@@ -262,6 +396,11 @@ Permite separar un algoritmo de la estructura del objeto en el que opera. Al sep
 ## Adapter
 Dos interfaces no relacionadas pueden trabajar juntas sin problema, a través de un objeto “Adapter”. Permite convertir la interfaz de una clase en otra interfaz que esperan los clientes, permitiendo que las clases trabajen juntas y que de otra manera no podrían hacerlo debido a la incompatibilidad de sus interfaces.
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/aefd89b7-d208-4614-afda-864ade5057b0" width="500">
+	</p>
+</div>
 
 ### Ventajas
 - Permite trabajar a clases juntas que de otra manera no podrían hacerlo debido a que tienen interfaces incompatibles.
@@ -274,6 +413,11 @@ Dos interfaces no relacionadas pueden trabajar juntas sin problema, a través de
 Sirve cuando tenemos que desacoplar una abstracción de su implementación para que los dos puedan variar independientemente. 
 Este patrón implica una interfaz que actúa como “puente” que hace que la funcionalidad de las clases concretas sea independiente de las clases del implementador de la interfaz. Por lo tanto ambos tipos de clase se pueden alterar estructuralmente sin afectarse entre sí. 
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/af769154-9a85-4d6b-addb-a8790b2bb71c" width="500">
+	</p>
+</div>
 
 ### Ventajas
 - Los cambios en la implementación de una abstracción no van a afectar nunca al cliente que los está utilizando.
@@ -288,6 +432,12 @@ Este patrón implica una interfaz que actúa como “puente” que hace que la f
 Permite construir objetos o algoritmos complejos a partir de objetos o algoritmos mas simples y parecidos entre sí, gracias a la composición recursiva y a una estructura de forma de arbol. 
 Permite construir objetos complejos componiendo de una forma recursiva objetos similares en una estructura de arbol. 
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/e09f8622-917a-4e66-a02a-11abbbe76701" width="500">
+	</p>
+</div>
+
 ### Ventajas
 - Los clientes tratan los objetos primitivos y compuestos de una manera uniforme a través de una interfaz de componentes que simplifica el código al cliente
 - Agregar nuevos componentes es sencillo y no requiere cambiar el código al cliente
@@ -299,6 +449,12 @@ Permite construir objetos complejos componiendo de una forma recursiva objetos s
 Se utiliza para agregar características o comportamientos adicionales a una instancia particular de una clase sin modificar las otras instancias de la misma clase. 
 Decorar un objeto cambia su comportamiento pero no su interfaz. 
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/20b46b50-fee3-43c0-b56f-0322139a26c8" width="500">
+	</p>
+</div>
+
 ### Ventajas
 - Da más sencillez a la hora de utilizar la herencia. Pudiendo utilizar distintas combinaciones de distintos tipos decorator pudiendo crear muchas combinaciones de comportamientos distintos. 
 ### Desventajas
@@ -307,6 +463,12 @@ Decorar un objeto cambia su comportamiento pero no su interfaz.
 ## Facade
 Busca simplificar el sistema para el cliente, proporcionando una interfaz simplificada para un conjunto de sus sistemas. Define una interfaz de alto nivel. Será un sistema facil de utilizar por parte del cliente pero difícil de desarrollar. 
 Sirve para cuando tenemos un sistema complejo y queremos exponer una forma simplificada, ocultando la complejidad. 
+
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/465b7b80-25a4-4818-9f69-11cc4e9f8843" width="500">
+	</p>
+</div>
 
 ### Ventajas
 - Oculta la dificultad del código al cliente.
@@ -322,6 +484,12 @@ Un Flyweight es un objeto compartido que se puede utilizar en múltiples context
 Al compartir estados para soportar un gran número de objetos pequeños aumentamos la eficiencia de espacio en memoria. 
 Este patrón es muy útil cuando necesitamos muchos objetos similares que solo se diferencian en unos pocos parámetros, pero que el resto de parámetros son comunes a todos los objetos. 
 
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/49a2ec57-47a0-439e-b707-56a80ca43cbf" width="500">
+	</p>
+</div>
+
 ### Ventajas
 - Reduce mucho la cantidad de memoria que necesitamos. 
 - Reduce el número total de objetos que tenemos en el sistema. 
@@ -334,6 +502,12 @@ Este patrón es muy útil cuando necesitamos muchos objetos similares que solo s
 
 ## Proxy
 Se utiliza como intermediario para acceder a un objeto. Las llamadas al objeto se hacen a través de este objeto, que actúa como sustituto y delegando las llamadas a los objetos respectivos. 
+
+<div>
+	<p align= 'center'>
+		<img src="https://github.com/marianobattaglia/design-patterns-swift/assets/94753551/49482ae1-34d0-4959-92db-b414508cd65f" width="500">
+	</p>
+</div>
 
 ### Ventajas
 - Ofrece más seguridad evitando duplicación de objetos que podrían ocupar espacio en memoria. 
